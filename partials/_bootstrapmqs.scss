@@ -1,0 +1,51 @@
+// Include media plugging into Bootstrap 4's Grid Breakpoints map
+// 
+$breakpoints: $grid-breakpoints;
+
+/*
+ * Our demo code
+ *
+ */
+body {
+  text-align: center;
+  background-color: #E3CCB5;
+  
+  &::before {
+    content: "<sm";
+    color: #000;
+    font-size: 5rem;
+  }
+
+  @include media(">sm") {
+    background-color: #B5CCE3;
+    
+    &::before {
+      content: ">sm";
+    }
+  }
+
+  @include media(">md") {
+    background-color: #FFF1EB;
+    
+    &::before {
+      content: ">md";
+    } 
+  }
+
+  @include media(">lg") {
+    background-color: #E6F5D6;
+    
+    &::before {
+      content: ">lg";
+    } 
+  }
+  
+  @include media(">xl") {
+    background-color: #F7F7D4;
+    
+    &::before {
+      content: ">xl";
+    } 
+  }
+  
+}

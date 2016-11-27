@@ -1,0 +1,5 @@
+bower init
+bower install --save bootstrap-sass
+npm install --save-dev wiredep
+gulp
+

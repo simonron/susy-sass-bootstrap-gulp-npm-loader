@@ -1,0 +1,31 @@
+{
+  "name": "bower install --save bootstrap-sass",
+  "version": "0.0.1",
+  "authors": [
+    "Simon Anthony <simon.anthony@tortysoft.com>"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/!(variables).less",
+        "dist/fonts/*",
+        "dist/js/*"
+      ]
+    }
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/simonron/mysql",
+  "description": "npm install --save-dev wiredep",
+  "main": "gulp",
+  "dependencies": {
+    "bootstrap-sass": "*",
+    "bootstrap": "^3.3.7"
+  }
+}
