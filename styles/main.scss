@@ -10,16 +10,20 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-mincer";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/test";
+@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
 
 //@import "../partials/bootstrapmqs";
 @import "../partials/susyConfig"; 
-$primary-color: #f00;
+@import "../partials/overrides";  
+
+$primary-color: #f00; 
 
 /*	.ag{
 		display:none 
 	}*/
 .full{
-		@include span(full); 
+		@include span(full);    
 }
 #title {
 	color: $primary-color; 
@@ -68,27 +72,56 @@ $large: 900px 1200px;
 $exLarge: 1200px 5000px;
 body {
 	background-color: #fbeecb;
-	@include breakpoint($exSmall) {
+		transition: all 1.5s ease-in-out ;
+
+	@include breakpoint($exSmall) { 
 		background: #f00;
-			transition: all 1.5s ease-in-out ;
 	}
 	@include breakpoint($small) {
 		background: #ff0;
-			transition: all 1.5s ease-in-out ;
 	}
-	@include breakpoint($medium) {
+	@include breakpoint($medium) { 
 		background: #f0f;
-			transition: all 1.5s ease-in-out ;
 	}
 	@include breakpoint($large) {
 		background: #0ff;
-			transition: all 1.5s ease-in-out ;
 	}
 	@include breakpoint($exLarge) {
 		background: #00f;
-			transition: all 1.5s ease-in-out ;
 	}
 }
+/*
+joomla layout  
+*/
+	@include breakpoint($exSmall) { 
+	}
+	@include breakpoint($small) {
+	}
+	@include breakpoint($medium) { 
+		#left-sidebar{
+				@include span(3 of 12); 
+			background: #888;
+		}
+		  
+		#content{
+			@include span(6 of 12);
+			@include clearfix;
+			background: #aaa;
+		}
+		
+		#right-sidebar{
+				@include span(3 of 12 last);
+			background: #ddd;
+		}
+	}
+	@include breakpoint($large) {
+	}
+	@include breakpoint($exLarge) {
+	}
+
+/*
+END joomla layout
+*/
 .ag1,
 .ag3 {
 	background-color: #71dad2;
@@ -271,9 +304,8 @@ h2 {
 
 @include breakpoint($exLarge) {
 	.container{
-		width:80%;
+		width:90%;
 		margin:0 auto;
-
 	}
 
 

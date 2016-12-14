@@ -5,7 +5,7 @@ var env = require('minimist')(process.argv.slice(2)),
 	imagemin = require('gulp-imagemin'),
 	livereload = require('gulp-livereload'),
 	sass = require('gulp-sass'),
-	csso = require('gulp-csso'),
+	csso = require('gulp-csso'), // CSS compressor
 	coffee = require('gulp-coffee'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify'),
@@ -16,7 +16,7 @@ var env = require('minimist')(process.argv.slice(2)),
 	tinylr = require('tiny-lr'),
 	express = require('express'),
 	app = express(),
-	marked = require('marked'),
+	marked = require('marked'),  
 	path = require('path'),
 	neat = require('node-neat').includePaths,
 	server = tinylr(),
@@ -29,6 +29,7 @@ var env = require('minimist')(process.argv.slice(2)),
 	lessSources = ['public/lib/bootstrap/less'],
 	partialSources = ['partials/*.scss'],
 	htmlSources = ['index.html'],
+	phpSources = ['index.php'],
 	compass = require('gulp-compass'),
 	gulpif = require('gulp-if'),
 	modRewrite = require('connect-modrewrite'),
@@ -87,7 +88,7 @@ gulp.task('coffee', function () {
 				bare: true
 			})
 			.on('error', gutil.log))
-		.pipe(gulp.dest(outputDir + "css/"))
+		.pipe(gulp.dest(outputDir + "js/"))
 });
 
 gulp.task('js', function () {
@@ -159,7 +160,13 @@ gulp.task('html', function () {
 		.pipe(connect.reload())
 });
 
+gulp.task('php', function () {
+	gulp.src(phpSources)
+		.pipe(gulp.dest(outputDir))
+		.pipe(connect.reload())
+});
+
 /*gulp.task('default', ['html','copy','js','images', 'fonts', 'templates', 'express', 'sass', 'connect', 'watch']);*/
 
 
-gulp.task('default', ['html','pug', 'coffee', 'js', 'ie', 'images', 'fonts', 'templates', 'express', 'sass', 'connect', 'watch']);
+gulp.task('default', ['html','php','pug', 'coffee', 'js', 'ie', 'images', 'fonts', 'templates', 'express', 'sass', 'connect', 'watch']);
