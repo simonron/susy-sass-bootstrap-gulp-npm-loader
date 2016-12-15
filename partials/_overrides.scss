@@ -92,11 +92,11 @@ $screen-md-min:              $screen-md !default;
 $screen-desktop:             $screen-md-min !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 
-$large: 		900px 1200px;
+$large: 		900px 1100px;
 
-$screen-lg: 1200px !default;
-$exLarge: 	1200px 5000px;
-
+$screen-lg: 1100px !default;
+$exLarge: 	1200px 1400px;
+$massive: 	480px 5000px;
 /* END	JOINT BREAKPOINTS  */
 
 

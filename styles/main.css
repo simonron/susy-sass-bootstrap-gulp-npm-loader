@@ -6230,18 +6230,24 @@ template {
 /* +++++++++++++++++++++++++++++++++++++ */
 /* END	JOINT BREAKPOINTS  */
 /* +++++++++++++++++++++++++++++++++++++ */
-/*	.ag{
-		display:none  
-	}*/
-.full {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0; }
-
-#title {
-  color: red;
-  margin-bottom: 100px; }
+body {
+  background-color: #fbeecb;
+  transition: all 1.5s ease-in-out; }
+  @media (min-width: 0) and (max-width: 480px) {
+    body {
+      background: #f00; } }
+  @media (min-width: 480px) and (max-width: 600px) {
+    body {
+      background: #ff0; } }
+  @media (min-width: 600px) and (max-width: 768px) {
+    body {
+      background: #f0f; } }
+  @media (min-width: 900px) and (max-width: 1100px) {
+    body {
+      background: #0ff; } }
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    body {
+      background: #00f; } }
 
 .item {
   width: 31.81818%;
@@ -6260,50 +6266,6 @@ template {
   float: right;
   margin-right: 0;
   transition: all 1.5s ease-in-out; }
-
-body {
-  padding: 10px; }
-  body h2 {
-    color: blue;
-    margin-bottom: 5px; }
-
-.container {
-  display: block; }
-
-.holder {
-  background: #ccc;
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  margin-bottom: 10px; }
-
-.frog {
-  background: #f00;
-  width: 100%;
-  float: right;
-  margin-right: 0; }
-
-/**
- - Styles for AG grids & Container
- */
-body {
-  background-color: #fbeecb;
-  transition: all 1.5s ease-in-out; }
-  @media (min-width: 0) and (max-width: 480px) {
-    body {
-      background: #f00; } }
-  @media (min-width: 480px) and (max-width: 600px) {
-    body {
-      background: #ff0; } }
-  @media (min-width: 600px) and (max-width: 768px) {
-    body {
-      background: #f0f; } }
-  @media (min-width: 900px) and (max-width: 1200px) {
-    body {
-      background: #0ff; } }
-  @media (min-width: 1200px) and (max-width: 5000px) {
-    body {
-      background: #00f; } }
 
 /*
 joomla layout  
@@ -6333,7 +6295,7 @@ joomla layout
     margin-right: 0;
     transition: all 1.5s ease-in-out;
     background: #d44; } }
-@media (min-width: 900px) and (max-width: 1200px) {
+@media (min-width: 900px) and (max-width: 1100px) {
   #left-sidebar {
     width: 15.25424%;
     float: left;
@@ -6358,7 +6320,7 @@ joomla layout
     margin-right: 0;
     transition: all 1.5s ease-in-out;
     background: #aaa; } }
-@media (min-width: 1200px) and (max-width: 5000px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
   #left-sidebar {
     width: 23.72881%;
     float: left;
@@ -6386,38 +6348,7 @@ joomla layout
 /*
 END joomla layout
 */
-.ag1,
-.ag3 {
-  background-color: #71dad2; }
-
-.ag2 {
-  background-color: #fae7b3; }
-
-.ag4,
-.ag5,
-.ag8,
-.ag9 {
-  background-color: #ee9e9c; }
-
-.ag6 {
-  background-color: #f09671; }
-
-.ag7 {
-  background-color: #f6d784; }
-
-.ag10 {
-  background-color: #ea9fc3; }
-
-/**
- - Text Styles
- */
-h2 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem; }
-
+/*Styles for AG grids*/
 .ag1 {
   width: 18.36735%;
   float: left;
@@ -6586,7 +6517,7 @@ h2 {
     margin-right: 0;
     transition: all 1.5s ease-in-out; } }
 /*large*/
-@media (min-width: 900px) and (max-width: 1200px) {
+@media (min-width: 900px) and (max-width: 1100px) {
   .ag2:after {
     content: " ";
     display: block;
@@ -6613,7 +6544,7 @@ h2 {
   div {
     padding: 5px 0; } }
 /*exLarge*/
-@media (min-width: 1200px) and (max-width: 5000px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
   .container {
     width: 90%;
     margin: 0 auto; }
@@ -6642,4 +6573,90 @@ h2 {
     transition: all 1.5s ease-in-out; }
 
   div {
-    padding: 5px 0; } }
+    padding: 5px 0; }
+
+  .ag10 {
+    width: 48.27586%;
+    float: right;
+    margin-right: 0; } }
+.marketing img {
+  display: block;
+  margin: 0 auto; }
+@media (min-width: 0) and (max-width: 480px) {
+  .marketing div {
+    width: 95%;
+    max-width: 300px;
+    margin: 0 auto; } }
+@media (min-width: 480px) and (max-width: 5000px) {
+  .marketing div:first-child {
+    width: 28.57143%;
+    float: left;
+    margin-right: 7.14286%; }
+  .marketing div:nth-child(2) {
+    width: 28.57143%;
+    float: left;
+    margin-right: 7.14286%; }
+  .marketing div:last-child {
+    width: 28.57143%;
+    float: right;
+    margin-right: 0; } }
+
+/*	.ag{
+		display:none  
+	}*/
+.full {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
+
+#title {
+  color: red;
+  margin-bottom: 100px; }
+
+body {
+  padding: 10px; }
+  body h2 {
+    color: blue;
+    margin-bottom: 5px; }
+
+.container {
+  display: block; }
+
+.holder {
+  background: #ccc;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  margin-bottom: 10px; }
+
+.frog {
+  background: #f00;
+  width: 100%;
+  float: right;
+  margin-right: 0; }
+
+/**
+ - Styles for AG Container
+ */
+.ag1,
+.ag3 {
+  background-color: #71dad2; }
+
+.ag2 {
+  background-color: #fae7b3; }
+
+.ag4,
+.ag5,
+.ag8,
+.ag9 {
+  background-color: #ee9e9c; }
+
+.ag6 {
+  background-color: #f09671; }
+
+.ag7 {
+  background-color: #f6d784; }
+
+.ag10 {
+  background-color: #ea9fc3; }

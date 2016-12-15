@@ -1,0 +1,296 @@
+body {
+	background-color: #fbeecb;
+	transition: all 1.5s ease-in-out;
+	@include breakpoint($exSmall) {
+		background: #f00;
+	}
+	@include breakpoint($small) {
+		background: #ff0;
+	}
+	@include breakpoint($small-tab) {
+		background: #f0f;
+	}
+	@include breakpoint($large) {
+		background: #0ff;
+	}
+	@include breakpoint($exLarge) {
+		background: #00f;
+	}
+}
+.item {
+	@include span(3 of 9);
+}
+.item1,
+.item2 {
+	@include span(3 of 9);
+	transition: all 1.5s ease-in-out;
+}
+.item3 {
+	@include span(3 of 9 last);
+	transition: all 1.5s ease-in-out;
+}
+
+/*
+joomla layout  
+*/
+
+@include breakpoint($exSmall) {}
+@include breakpoint($small) {}
+@include breakpoint($medium) {
+	#left-sidebar {
+		@include span(2 of 10);
+		transition: all 1.5s ease-in-out;
+		background: #888;
+	}
+	#content {
+		@include span(8 of 10 last);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #aaa;
+	}
+	.right-sidebar {
+		@include span(1 of 1 last);
+		transition: all 1.5s ease-in-out;
+		background: #d44;
+	}
+}
+@include breakpoint($large) {
+	#left-sidebar {
+		@include span(2 of 12);
+		transition: all 1.5s ease-in-out;
+		background: #eee;
+	}
+	#content {
+		@include span(8 of 12);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #ddd;
+	}
+	.right-sidebar {
+		@include span(2 of 12 last);
+		transition: all 1.5s ease-in-out;
+		background: #aaa;
+	}
+}
+@include breakpoint($exLarge) {
+	#left-sidebar {
+		@include span(3 of 12);
+		transition: all 1.5s ease-in-out;
+		background: #eee;
+	}
+	#content {
+		@include span(6 of 12);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #ddd;
+	}
+	.right-sidebar {
+		@include span(3 of 12 last);
+		transition: all 1.5s ease-in-out;
+		background: #aaa;
+	}
+}
+
+/*
+END joomla layout
+*/
+
+
+/*Styles for AG grids*/
+
+.ag1 {
+	@include span(2 of 10);
+	transition: all 1.5s ease-in-out;
+}
+.ag2 {
+	@include span(6 of 10);
+	@include clearfix;
+	transition: all 1.5s ease-in-out;
+}
+.ag3 {
+	@include span(2 of 10 last);
+	transition: all 1.5s ease-in-out;
+}
+.ag4 {
+	@include span(4 of 10);
+	transition: all 1.5s ease-in-out;
+}
+.ag5 {
+	@include span(4 of 10 last);
+	transition: all 1.5s ease-in-out;
+}
+.ag6 {
+	@include span(2 of 6);
+	transition: all 1.5s ease-in-out;
+}
+.ag7 {
+	@include span(4 of 6 last);
+	transition: all 1.5s ease-in-out;
+	@include clearfix;
+}
+.ag8 {
+	@include span(2 of 4);
+	transition: all 1.5s ease-in-out;
+}
+.ag9 {
+	@include span(2 of 4 last);
+	transition: all 1.5s ease-in-out;
+}
+.ag10 {
+	//clear: both;
+	// Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width
+	@include span(full);
+}
+.simonL {
+	@include span(1 of 2);
+	transition: all 1.5s ease-in-out;
+}
+.simonR {
+	@include span(1 of 2 last);
+	transition: all 1.5s ease-in-out;
+}
+
+/*exSmall*/
+
+@include breakpoint($exSmall) {
+	.ag,
+	.item,
+	.item1,
+	.item2,
+	.item3,
+	.simonL,
+	.simonR {
+		@include span(full);
+		padding: 5px 0px;
+		transition: all 1.5s ease-in-out;
+	}
+}
+
+/*small*/
+
+@include breakpoint($small) {
+	.item,
+	.item1,
+	.item2,
+	.item3,
+	.simonL,
+	.simonR {
+		transition: all 1.5s ease-in-out;
+		@include span(1 of 2);
+		@include container(90%);
+		padding: 5px 0px;
+		margin-left: 5%;
+	}
+	.item3 {
+		@include span(1 of 1 last);
+	}
+	.ag1 {
+		@include span(full);
+		transition: all 1.5s ease-in-out;
+	}
+	.ag3 {
+		@include span(full);
+		transition: all 1.5s ease-in-out;
+	}
+	.ag2 {
+		@include span(full);
+		transition: all 1.5s ease-in-out;
+	}
+}
+
+/*medium*/
+
+@include breakpoint($medium) {
+	.ag1 {
+		@include span(6 of 12);
+		transition: all 1.5s ease-in-out;
+	}
+	.ag3 {
+		@include span(6 of 12 last);
+		transition: all 1.5s ease-in-out;
+	}
+	.ag2 {
+		@include span(full);
+		transition: all 1.5s ease-in-out;
+	}
+}
+
+/*large*/
+
+@include breakpoint($large) {
+	.ag2 {
+		@include clearfix;
+	}
+	.item1 {
+		@include span(1 of 2);
+		transition: all 1.5s ease-in-out;
+	}
+	.item2 {
+		@include span(1 of 2 last);
+		transition: all 1.5s ease-in-out;
+	}
+	.item3 {
+		@include span(full last);
+		transition: all 1.5s ease-in-out;
+	}
+	div {
+		padding: 5px 0;
+	}
+}
+
+/*exLarge*/
+
+@include breakpoint($exLarge) {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.ag2 {
+		@include clearfix;
+	}
+	.item1 {
+		@include span(1 of 3);
+		transition: all 1.5s ease-in-out;
+	}
+	.item2 {
+		@include span(1 of 3);
+		transition: all 1.5s ease-in-out;
+	}
+	.item3 {
+		@include span(1 of 3 last);
+		transition: all 1.5s ease-in-out;
+	}
+	div {
+		padding: 5px 0;
+	}
+	.ag10 {
+		//clear: both;
+		// Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width
+		@include span(3 of 6 last);
+	}
+}
+.marketing {
+			img {
+			display: block;
+			margin: 0 auto;
+		}
+	div {
+		@include breakpoint($exSmall){
+		width: 95%;
+		max-width: 300px;
+		margin: 0 auto;
+
+	}
+	}
+	@include breakpoint($massive) {
+		div:first-child {
+			@include span(1 of 3);
+		}
+		div:nth-child(2) {
+			@include span(1 of 3);
+		}
+		div:last-child {
+			@include span(1 of 3 last);
+		}
+	}
+}

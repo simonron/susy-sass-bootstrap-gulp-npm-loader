@@ -145,6 +145,7 @@ gulp.task('watch', function () {
 	gulp.watch(sassSources, ['sass']);
 	gulp.watch(partialSources, ['sass']);
 	gulp.watch(htmlSources, ['html']);
+	gulp.watch(phpSources, ['php']);
 });
 
 gulp.task('connect', function () {
