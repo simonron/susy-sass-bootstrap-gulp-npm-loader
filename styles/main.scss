@@ -2,31 +2,26 @@
 @import "../node_modules/susy/sass/susy",
         "../node_modules/layout-tools-for-susy/stylesheets/layout-tools-for-susy";
 */
-@import "../node_modules/susy/sass/_susy.scss";
-@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
+@import "../node_modules/susy/sass/susy";
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
-	
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-mincer";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../bower_components/bootstrap-sass/assets/stylesheets/test";
-@import "../bower_components/bootstrap/dist/css/bootstrap.min.css";
-
-//@import "../partials/bootstrapmqs";
-@import "../partials/susyConfig"; 
-@import "../partials/overrides";  
-
-$primary-color: #f00; 
+@import "../partials/susyConfig";
+@import "../partials/overrides";
+$primary-color: #f00;
 
 /*	.ag{
-		display:none 
+		display:none  
 	}*/
-.full{
-		@include span(full);    
+
+.full {
+	@include span(full);
 }
 #title {
-	color: $primary-color; 
+	color: $primary-color;
 	margin-bottom: 100px;
 }
 .item {
@@ -35,21 +30,21 @@ $primary-color: #f00;
 .item1,
 .item2 {
 	@include span(3 of 9);
-	transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .item3 {
 	@include span(3 of 9 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 body {
-	padding:10px;
+	padding: 10px;
 	h2 {
 		color: blue;
 		margin-bottom: 5px;
 	}
 }
-.container{
-	display:block;
+.container {
+	display: block;
 }
 .holder {
 	background: #ccc;
@@ -65,24 +60,22 @@ body {
  - Styles for AG grids & Container
  */
 
-$exSmall: 0 480px;
-$small: 480px 600px;
-$medium: 600px 900px;
-$large: 900px 1200px;
-$exLarge: 1200px 5000px;
+
+
 body {
 	background-color: #fbeecb;
-		transition: all 1.5s ease-in-out ;
-
-	@include breakpoint($exSmall) { 
+	transition: all 1.5s ease-in-out;
+	@include breakpoint($exSmall) {
 		background: #f00;
 	}
 	@include breakpoint($small) {
 		background: #ff0;
 	}
-	@include breakpoint($medium) { 
+	@include breakpoint($small-tab) {
 		background: #f0f;
 	}
+	
+
 	@include breakpoint($large) {
 		background: #0ff;
 	}
@@ -90,38 +83,72 @@ body {
 		background: #00f;
 	}
 }
+
 /*
 joomla layout  
 */
-	@include breakpoint($exSmall) { 
+
+@include breakpoint($exSmall) {}
+@include breakpoint($small) {}
+@include breakpoint($medium) {
+	#left-sidebar {
+		@include span(2 of 10);
+		transition: all 1.5s ease-in-out;
+		background: #888;
 	}
-	@include breakpoint($small) {
+	#content {
+		@include span(8 of 10 last);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #aaa;
 	}
-	@include breakpoint($medium) { 
-		#left-sidebar{
-				@include span(3 of 12); 
-			background: #888;
-		}
-		  
-		#content{
-			@include span(6 of 12);
-			@include clearfix;
-			background: #aaa;
-		}
-		
-		#right-sidebar{
-				@include span(3 of 12 last);
-			background: #ddd;
-		}
+	.right-sidebar {
+		@include span(1 of 1 last);
+		transition: all 1.5s ease-in-out;
+		background: #d44;
 	}
-	@include breakpoint($large) {
+}
+@include breakpoint($large) {
+	#left-sidebar {
+		@include span(2 of 12);
+		transition: all 1.5s ease-in-out;
+		background: #eee;
 	}
-	@include breakpoint($exLarge) {
+	#content {
+		@include span(8 of 12);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #ddd;
 	}
+	.right-sidebar {
+		@include span(2 of 12 last);
+		transition: all 1.5s ease-in-out;
+		background: #aaa;
+	}
+}
+@include breakpoint($exLarge) {
+	#left-sidebar {
+		@include span(3 of 12);
+		transition: all 1.5s ease-in-out;
+		background: #eee;
+	}
+	#content {
+		@include span(6 of 12);
+		transition: all 1.5s ease-in-out;
+		@include clearfix;
+		background: #ddd;
+	}
+	.right-sidebar {
+		@include span(3 of 12 last);
+		transition: all 1.5s ease-in-out;
+		background: #aaa;
+	}
+}
 
 /*
 END joomla layout
 */
+
 .ag1,
 .ag3 {
 	background-color: #71dad2;
@@ -158,41 +185,41 @@ h2 {
 }
 .ag1 {
 	@include span(2 of 10);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag2 {
 	@include span(6 of 10);
 	@include clearfix;
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag3 {
 	@include span(2 of 10 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag4 {
 	@include span(4 of 10);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag5 {
 	@include span(4 of 10 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag6 {
 	@include span(2 of 6);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag7 {
 	@include span(4 of 6 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 	@include clearfix;
 }
 .ag8 {
 	@include span(2 of 4);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag9 {
 	@include span(2 of 4 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .ag10 {
 	//clear: both;
@@ -201,11 +228,11 @@ h2 {
 }
 .simonL {
 	@include span(1 of 2);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 .simonR {
 	@include span(1 of 2 last);
-		transition: all 1.5s ease-in-out ;
+	transition: all 1.5s ease-in-out;
 }
 
 /*exSmall*/
@@ -218,82 +245,78 @@ h2 {
 	.item3,
 	.simonL,
 	.simonR {
-	
 		@include span(full);
 		padding: 5px 0px;
-			transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
-	
 }
 
 /*small*/
+
 @include breakpoint($small) {
-.item,
-.item1,
-.item2,
-.item3,
-.simonL,
-.simonR {
-		transition: all 1.5s ease-in-out ;
+	.item,
+	.item1,
+	.item2,
+	.item3,
+	.simonL,
+	.simonR {
+		transition: all 1.5s ease-in-out;
 		@include span(1 of 2);
 		@include container(90%);
 		padding: 5px 0px;
 		margin-left: 5%;
 	}
-	.item3{
+	.item3 {
 		@include span(1 of 1 last);
 	}
 	.ag1 {
-			@include span(full);
-		transition: all 1.5s ease-in-out ;
+		@include span(full);
+		transition: all 1.5s ease-in-out;
 	}
 	.ag3 {
-			@include span(full);
-		transition: all 1.5s ease-in-out ;
+		@include span(full);
+		transition: all 1.5s ease-in-out;
 	}
 	.ag2 {
 		@include span(full);
-		transition: all 1.5s ease-in-out ;
-	}	
+		transition: all 1.5s ease-in-out;
+	}
 }
 
 /*medium*/
 
 @include breakpoint($medium) {
-	
 	.ag1 {
 		@include span(6 of 12);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.ag3 {
 		@include span(6 of 12 last);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.ag2 {
 		@include span(full);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
-
 }
 
 /*large*/
 
 @include breakpoint($large) {
-		.ag2{
+	.ag2 {
 		@include clearfix;
 	}
 	.item1 {
 		@include span(1 of 2);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.item2 {
 		@include span(1 of 2 last);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.item3 {
 		@include span(full last);
-		transition: all 1.5s ease-in-out ;
-		
+		transition: all 1.5s ease-in-out;
 	}
 	div {
 		padding: 5px 0;
@@ -303,27 +326,24 @@ h2 {
 /*exLarge*/
 
 @include breakpoint($exLarge) {
-	.container{
-		width:90%;
-		margin:0 auto;
+	.container {
+		width: 90%;
+		margin: 0 auto;
 	}
-
-
-	.ag2{
+	.ag2 {
 		@include clearfix;
 	}
 	.item1 {
 		@include span(1 of 3);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.item2 {
 		@include span(1 of 3);
-		transition: all 1.5s ease-in-out ;
+		transition: all 1.5s ease-in-out;
 	}
 	.item3 {
 		@include span(1 of 3 last);
-		transition: all 1.5s ease-in-out ;
-		
+		transition: all 1.5s ease-in-out;
 	}
 	div {
 		padding: 5px 0;

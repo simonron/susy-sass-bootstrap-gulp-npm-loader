@@ -2,23 +2,12 @@
 @import "../node_modules/susy/sass/susy",
         "../node_modules/layout-tools-for-susy/stylesheets/layout-tools-for-susy";
 */
-/*@function valid-column-math(
-  $math,
-  $column-width
-) {
-  @if $math == static and not($column-width) {
-    @error 'Static math requires a valid column-width setting.';
-  }
-
-  @return $column-width;
-}*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(../bower_components/bootstrap/dist/css/bootstrap.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5826,9 +5815,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-body {
-  background: #f00; }
-
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -6240,10 +6226,12 @@ template {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-@media (min-width: 992px) {
-  width: 95%; }
+/* SUSY AND BOOTSTRAP JOINT BREAKPOINTS  */
+/* +++++++++++++++++++++++++++++++++++++ */
+/* END	JOINT BREAKPOINTS  */
+/* +++++++++++++++++++++++++++++++++++++ */
 /*	.ag{
-		display:none 
+		display:none  
 	}*/
 .full {
   width: 100%;
@@ -6307,7 +6295,7 @@ body {
   @media (min-width: 480px) and (max-width: 600px) {
     body {
       background: #ff0; } }
-  @media (min-width: 600px) and (max-width: 900px) {
+  @media (min-width: 600px) and (max-width: 768px) {
     body {
       background: #f0f; } }
   @media (min-width: 900px) and (max-width: 1200px) {
@@ -6320,28 +6308,81 @@ body {
 /*
 joomla layout  
 */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 900px) {
   #left-sidebar {
-    width: 23.72881%;
+    width: 18.36735%;
     float: left;
-    margin-right: 1.69492%;
+    margin-right: 2.04082%;
+    transition: all 1.5s ease-in-out;
     background: #888; }
 
   #content {
-    width: 49.15254%;
-    float: left;
-    margin-right: 1.69492%;
+    width: 79.59184%;
+    float: right;
+    margin-right: 0;
+    transition: all 1.5s ease-in-out;
     background: #aaa; }
     #content:after {
       content: " ";
       display: block;
       clear: both; }
 
-  #right-sidebar {
+  .right-sidebar {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+    transition: all 1.5s ease-in-out;
+    background: #d44; } }
+@media (min-width: 900px) and (max-width: 1200px) {
+  #left-sidebar {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    transition: all 1.5s ease-in-out;
+    background: #eee; }
+
+  #content {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    transition: all 1.5s ease-in-out;
+    background: #ddd; }
+    #content:after {
+      content: " ";
+      display: block;
+      clear: both; }
+
+  .right-sidebar {
+    width: 15.25424%;
+    float: right;
+    margin-right: 0;
+    transition: all 1.5s ease-in-out;
+    background: #aaa; } }
+@media (min-width: 1200px) and (max-width: 5000px) {
+  #left-sidebar {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    transition: all 1.5s ease-in-out;
+    background: #eee; }
+
+  #content {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    transition: all 1.5s ease-in-out;
+    background: #ddd; }
+    #content:after {
+      content: " ";
+      display: block;
+      clear: both; }
+
+  .right-sidebar {
     width: 23.72881%;
     float: right;
     margin-right: 0;
-    background: #ddd; } }
+    transition: all 1.5s ease-in-out;
+    background: #aaa; } }
 /*
 END joomla layout
 */
@@ -6525,7 +6566,7 @@ h2 {
     margin-right: 0;
     transition: all 1.5s ease-in-out; } }
 /*medium*/
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .ag1 {
     width: 49.15254%;
     float: left;
