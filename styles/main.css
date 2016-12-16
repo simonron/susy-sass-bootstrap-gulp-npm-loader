@@ -6229,6 +6229,25 @@ template {
 /* SUSY AND BOOTSTRAP JOINT BREAKPOINTS  */
 /* +++++++++++++++++++++++++++++++++++++ */
 /* END	JOINT BREAKPOINTS  */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media (min-width: 768px) {
+    .container {
+      width: 95%; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 992px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
 /* +++++++++++++++++++++++++++++++++++++ */
 body {
   background-color: #fbeecb;
@@ -6248,6 +6267,11 @@ body {
   @media (min-width: 1200px) and (max-width: 1400px) {
     body {
       background: #00f; } }
+
+section:after {
+  content: " ";
+  display: block;
+  clear: both; }
 
 .item {
   width: 31.81818%;
@@ -6271,7 +6295,7 @@ body {
 joomla layout  
 */
 @media (min-width: 768px) and (max-width: 900px) {
-  #left-sidebar {
+  #sidebar {
     width: 18.36735%;
     float: left;
     margin-right: 2.04082%;
@@ -6296,7 +6320,7 @@ joomla layout
     transition: all 1.5s ease-in-out;
     background: #d44; } }
 @media (min-width: 900px) and (max-width: 1100px) {
-  #left-sidebar {
+  #sidebar {
     width: 15.25424%;
     float: left;
     margin-right: 1.69492%;
@@ -6321,7 +6345,7 @@ joomla layout
     transition: all 1.5s ease-in-out;
     background: #aaa; } }
 @media (min-width: 1200px) and (max-width: 1400px) {
-  #left-sidebar {
+  #sidebar {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
@@ -6601,6 +6625,70 @@ END joomla layout
     float: right;
     margin-right: 0; } }
 
+div.featurette {
+  margin-bottom: 10px; }
+  div.featurette:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  div.featurette div {
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 5px 5px #f00; }
+  div.featurette div:first-child {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px; }
+  div.featurette div:last-child {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 25px; }
+  @media (min-width: 480px) and (max-width: 5000px) {
+    div.featurette {
+      margin-bottom: 10px; }
+      div.featurette:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      div.featurette div:first-child {
+        width: 64.28571%;
+        float: left;
+        margin-right: 7.14286%;
+        margin-bottom: 10px; }
+      div.featurette div:last-child {
+        width: 28.57143%;
+        float: right;
+        margin-right: 0;
+        margin-top: 25px; } }
+
+#jumbotron,
+#gulp_test,
+#susy_demo,
+#carousel {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; }
+
+#mask {
+  background: #000;
+  height: 0vh;
+  position: fixed;
+  top: 0vh;
+  width: 100vw;
+  opacity: 0;
+  z-index: 3; }
+
 /*	.ag{
 		display:none  
 	}*/
@@ -6622,6 +6710,10 @@ body {
 
 .container {
   display: block; }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .holder {
   background: #ccc;

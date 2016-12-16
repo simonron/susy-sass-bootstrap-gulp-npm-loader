@@ -12,6 +12,7 @@
 @import "../partials/susyConfig";
 @import "../partials/overrides";
 @import "../partials/layout";
+@import "../partials/SRAmenu";
 $primary-color: #f00;
 
 /*	.ag{
@@ -35,6 +36,7 @@ body {
 }
 .container {
 	display: block;
+	@include clearfix
 }
 .holder {
 	background: #ccc;
@@ -49,12 +51,6 @@ body {
 /**
  - Styles for AG Container
  */
-
-
-
-
-
-
 
 .ag1,
 .ag3 {

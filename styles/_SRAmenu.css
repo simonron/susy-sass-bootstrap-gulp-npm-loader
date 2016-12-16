@@ -1,0 +1,25 @@
+#jumbotron,
+#gulp_test,
+#susy_demo,
+#carousel {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; }
+
+#mask {
+  background: #000;
+  height: 0vh;
+  position: fixed;
+  top: 0vh;
+  width: 100vw;
+  opacity: 0;
+  z-index: 3; }
+
+body {
+  display: none; }

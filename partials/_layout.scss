@@ -17,6 +17,10 @@ body {
 		background: #00f;
 	}
 }
+section {
+	@include clearfix;
+	//display:none;
+}
 .item {
 	@include span(3 of 9);
 }
@@ -37,7 +41,7 @@ joomla layout
 @include breakpoint($exSmall) {}
 @include breakpoint($small) {}
 @include breakpoint($medium) {
-	#left-sidebar {
+	#sidebar {
 		@include span(2 of 10);
 		transition: all 1.5s ease-in-out;
 		background: #888;
@@ -55,7 +59,7 @@ joomla layout
 	}
 }
 @include breakpoint($large) {
-	#left-sidebar {
+	#sidebar {
 		@include span(2 of 12);
 		transition: all 1.5s ease-in-out;
 		background: #eee;
@@ -73,7 +77,7 @@ joomla layout
 	}
 }
 @include breakpoint($exLarge) {
-	#left-sidebar {
+	#sidebar {
 		@include span(3 of 12);
 		transition: all 1.5s ease-in-out;
 		background: #eee;
@@ -270,17 +274,16 @@ END joomla layout
 	}
 }
 .marketing {
-			img {
-			display: block;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	div {
+		@include breakpoint($exSmall) {
+			width: 95%;
+			max-width: 300px;
 			margin: 0 auto;
 		}
-	div {
-		@include breakpoint($exSmall){
-		width: 95%;
-		max-width: 300px;
-		margin: 0 auto;
-
-	}
 	}
 	@include breakpoint($massive) {
 		div:first-child {
@@ -291,6 +294,36 @@ END joomla layout
 		}
 		div:last-child {
 			@include span(1 of 3 last);
+		}
+	}
+}
+div.featurette {
+	margin-bottom: 10px;
+	@include clearfix;
+	div {
+		padding: 10px;
+		background: #fff;
+		border-radius: 20px;
+		box-shadow: 5px 5px #f00;
+	}
+	div:first-child {
+		@include span(full);
+		margin-bottom: 10px;
+	}
+	div:last-child {
+		@include span(full);
+		margin-top: 25px;
+	}
+	@include breakpoint($massive) {
+		margin-bottom: 10px;
+		@include clearfix;
+		div:first-child {
+			@include span(2 of 3);
+			margin-bottom: 10px;
+		}
+		div:last-child {
+			@include span(1 of 3 last);
+			margin-top: 25px;
 		}
 	}
 }

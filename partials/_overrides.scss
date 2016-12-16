@@ -1,3 +1,4 @@
+
 //== Media queries breakpoints
 //
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -19,7 +20,7 @@ $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md: 768px 900px !default;
+$screen-md: 									900px !default;
 
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
@@ -63,7 +64,7 @@ $container-tablet:             (720px + $grid-gutter-width) !default;
 $container-sm:                 $container-tablet !default;
 
 // Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-desktop:            (1940px + $grid-gutter-width) !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
 
@@ -87,17 +88,32 @@ $screen-sm: 768px !default;
 $medium: 		768px 900px;
 
 $screen-md: 768px 900px !default;
-$screen-md-min:              $screen-md !default;
+$screen-md-min:          $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
-$screen-desktop:             $screen-md-min !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-desktop:         $screen-md !default;
+$screen-sm-max:         ($screen-md - 1) !default;
 
 $large: 		900px 1100px;
-
+ 
 $screen-lg: 1100px !default;
 $exLarge: 	1200px 1400px;
 $massive: 	480px 5000px;
 /* END	JOINT BREAKPOINTS  */
 
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm) {
+    width: 95%;
+  }
+	  @media (min-width: $screen-md){
+    width: $screen-md;   
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+
+}
 
 /* +++++++++++++++++++++++++++++++++++++ */
