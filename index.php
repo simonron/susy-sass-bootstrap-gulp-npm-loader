@@ -89,6 +89,7 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 
 			<!-- Body -->
 			<div class="body">
+						<span id="top_of_site"></span>
 				<div class="container">
 
 					<!-- Header -->
@@ -123,7 +124,7 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 
 
 					<!--			<?php endif; ?>-->
-					<span id="top_of_site"></span>
+		
 					<jdoc:include type="modules" name="hero" style="xhtml" />
 
 

@@ -4,6 +4,9 @@ var posX;
 jQuery(document).ready(function ($) {
 
 
+	/*
+	Scroll on hover for gallery id
+	
 	$('#gallery').bind('mouseenter', function () {
 		this.iid = setInterval(function () {
 			galleryScroller()
@@ -11,7 +14,22 @@ jQuery(document).ready(function ($) {
 	}).bind('mouseleave', function () {
 		this.iid && clearInterval(this.iid);
 	});
+	
+	function galleryScroller(event) {
+		document.addEventListener('mousemove', onMouseMove, false);
+		doScroll(scrollX);
 
+		function onMouseMove(e) {
+			posX = e.clientX;
+			if (!posX) {
+				posX = e.pageX;
+			}
+			//console.log(posX);
+		}
+		scrlRate = (window.innerWidth / posX);
+		//console.log(scrlRate);
+		scrollX=(scrlRate-2.5)*-2;
+	}*/
 
 
 
@@ -133,10 +151,10 @@ jQuery(document).ready(function ($) {
 
 			//****************END MOVES PIECE
 
-		/*	$(mask).css("height", "100vh");
+			$(mask).css("height", "100vh");
 			$(mask).animate({
 				opacity: 0.5
-			}, 200);*/ //displays mask after selection
+			}, 200); //displays mask after selection
 
 			/*******************  ON 2nd click Menu Item Action *********************************/
 
@@ -303,47 +321,7 @@ jQuery(document).ready(function ($) {
 		/*		console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX last_content = '+ $(".web_portfolio "+last_content).css("display","none"));*/
 	}
 
-	function galleryScroller(event) {
-		document.addEventListener('mousemove', onMouseMove, false);
-		doScroll(scrollX);
 
-		function onMouseMove(e) {
-			posX = e.clientX;
-			if (!posX) {
-				posX = e.pageX;
-			}
-
-			//console.log(posX);
-		}
-
-		scrlRate = (window.innerWidth / posX);
-		//console.log(scrlRate);
-
-	/*	if (scrlRate < 1.8) {
-			scrollX = 1;
-		}
-		if (scrlRate < 1.3) {
-			scrollX = 2;
-		}
-		if (scrlRate < 1.2) {
-			scrollX = 3;
-		}
-		if (scrlRate > 1.8) {
-			scrollX = 0;
-		}
-		if (scrlRate > 2.5) {
-			scrollX = -1;
-		}
-		if (scrlRate > 4.5) {
-			scrollX = -2;
-		}
-if (scrlRate > 5) {
-			scrollX = -3;
-		}
-*/
-
-		scrollX=(scrlRate-2.5)*-2;
-	}
 
 	function doScroll(scrollX) {
 		//console.log("scrlRate= " + scrlRate + "scrollx= " + scrollX);
