@@ -69,13 +69,12 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 		<!--[if lt IE 9]><script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script><![endif]-->
 	</head>
 
-	<body class="site">
-		<div class="wrapper">
+	<body>
+	<div class="site wrapper">
+		
 			<!-- Mobile sidebar -->
-			<div class='off-screen-left'>
-				<div class='container'>
-					<jdoc:include type="modules" name="mobile-sidebar-left" />
-				</div>
+			<div class='mobile-sidebar-left'>
+					<jdoc:include type="modules" name="mobile_sidebar_left" />
 			</div>
 
 			<div class='cover' onclick='onClickCover()'></div>
@@ -109,18 +108,16 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 					<!--			<?php if ($this->countModules('above_hero')) : ?>-->
 
 					<nav class="navigation" role="navigation">
-						<div class="navbar main_menu">
+						<div class="main-menu ">
 							<jdoc:include type="modules" name="main_menu" style="xhtml" />
-							<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</a>
+				
 						</div>
+							</nav>
+						
 						<div>
 							<jdoc:include type="modules" name="above_hero" style="xhtml" />
 						</div>
-					</nav>
+				
 
 
 					<!--			<?php endif; ?>-->
@@ -184,29 +181,24 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 					</p>
 				</div>
 			</footer>
+			
+			<section id="about" class="jumbotron text-xs-center">
+				<div class="navbar-collapse collapse inverse" id="navbar-header">
 
-			<div class="navbar-collapse collapse inverse" id="navbar-header">
-				<div class="container-fluid">
-					<div class="about">
-						<h4>About</h4>
-						<p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+					<jdoc:include type="modules" name="about" style="xhtml" />
+		
+				
+						Natus quo beatae nesciunt unde, quas quae sunt aliquam magni rerum earum praesentium ea esse error facere. Inventore quas sed placeat nulla.
+						Cupiditate, laborum veniam dolorum quos odit labore obcaecati dolores optio in delectus consectetur consequatur praesentium quisquam. Magni reprehenderit maiores aspernatur odio cumque!
 					</div>
-					<div class="social">
-						<h4>Contact</h4>
-						<ul class="list-unstyled">
-							<li><a href="#">Follow on Twitter</a></li>
-							<li><a href="#">Like on Facebook</a></li>
-							<li><a href="#">Email me</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			
 			<div class="navbar navbar-static-top navbar-dark bg-inverse">
 				<div class="container-fluid">
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
 					<a href="#" class="navbar-brand">Album</a>
 				</div>
 			</div>
+			</section>
 
 			<section id="jumbotron" class="jumbotron text-xs-center">
 				<div class="container">
@@ -248,62 +240,9 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 				</section>
 			</div>
 
-			<div class="container">
-				<section id="susy_demo">
-					<h1>Hugely altered version of SRA 10 column complex nested grid AG test</h1>
+							<jdoc:include type="modules" name="susy_demo" style="xhtml" />
 
-					<div class="ag ag1">
-						<h2>AG 1</h2> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, officiis amet repellat quod dolorem error mollitia laboriosam minus perferendis ea voluptatibus explicabo tenetur sit incidunt ipsa, earum quidem, doloribus assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, fuga soluta quam asperiores odit porro laboriosam, modi pariatur aliquam, iste alias optio voluptas deleniti nam assumenda illum quaerat dolorem magnam.
-					</div>
-					<!-- /ag1 -->
-					<div class="ag ag3">
-						<h2>AG 3</h2> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis atque esse eius eum dolore consequatur amet quasi repudiandae, debitis iure aliquam, quis iste, vero commodi ab cumque iusto tenetur fugit.
-						<div>
-							<div class="simonL">SIMON ONE
-								<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ratione nobis labore molestias, rerum nulla voluptate expedita! Facilis earum a accusamus quaerat rem error dolorum sequi animi harum! Assumenda, unde.</div>
-							<div class="simonR">SIMON TWO
-								<br>Blanditiis maxime nesciunt molestias, repellat, ipsum esse dolorum facere omnis est rem ipsam sapiente, tempore nisi saepe commodi totam eaque quod veritatis. Dolorum iure, nulla quos perspiciatis provident minus, quis!</div>
-						</div>
-					</div>
-					<!-- ag4 to ag7 are nested within ag2.-->
-					<div class="ag ag2">
-						<h2>AG 2</h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vero corrupti corporis molestiae at ab sed, commodi incidunt, sit fuga autem, aut dicta ipsam, sequi enim expedita sapiente totam provident.
-						<br>
-						<div class="ag ag4">
-							<h2>AG 4</h2>
-						</div>
-						<div class="ag ag5">
-							<h2>AG 5</h2>
-						</div>
-						<div class="ag ag6">
-							<h2>AG 6</h2>
-						</div>
-
-						<!-- ag8, ag9 and ag10 are nested within ag7 -->
-						<div class="ag ag7">
-							<h2>AG 7</h2>
-							<div class="ag ag8">
-								<h2>AG 8</h2>
-							</div>
-							<div class="ag ag9">
-								<h2>AG 9</h2>
-							</div>
-						</div>
-						<div class="ag ag10">
-							<h2>AG 10</h2>
-						</div>
-						<!-- /ag7 -->
-					</div>
-					<!-- /ag2 -->
-
-
-
-					<!-- /ag3 -->
-				</section>
-			</div>
-
-
-
+			
 			<div class="container">
 				<div class="item1 "> item1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sequi cumque dignissimos maiores possimus neque perferendis tempore, a facilis id cum magni excepturi illo debitis nihil libero soluta non quasi.</div>
 				<div class=" item2"> item2 Placeat earum, soluta accusantium totam labore ex saepe quisquam nemo perferendis atque, eum debitis sint laborum harum fugiat? Ab nostrum molestias laboriosam eius, suscipit ipsam atque provident amet quam maiores!</div>

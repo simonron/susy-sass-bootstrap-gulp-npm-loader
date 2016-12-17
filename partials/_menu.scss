@@ -1,10 +1,10 @@
-div.main_menu {
+div.main-menu {
   margin-bottom: -10px;
   font-size: 14px;
  }
-  div.main_menu ul.nav.menu {
+  div.main-menu ul.nav.menu {
  }
-  div.main_menu li a {
+  div.main-menu li a {
     display: block;
     float: left;
     color: #fff;
@@ -14,13 +14,13 @@ div.main_menu {
     -moz-transition: background .5s ease-in-out;
     -webkit-transition: background .5s ease-in-out;
     text-decoration: none; }
-  div.main_menu li a:hover {
+  div.main-menu li a:hover {
     color: #000;
     background: #fff;
     transition: background .5s ease-in-out;
     -moz-transition: background .5s ease-in-out;
     -webkit-transition: background .5s ease-in-out; }
-  div.main_menu ul.nav-child {
+  div.main-menu ul.nav-child {
     margin: 0 auto;
     text-align: center;
     background: #777;
@@ -33,11 +33,11 @@ div.main_menu {
     width: 80%;
     left: 10vw;
     border: solid 1px orange; }
-    div.main_menu ul.nav-child li {
+    div.main-menu ul.nav-child li {
       display: inline-block;
       margin: 7px 4px 3px;
       line-height: 1.2em; }
-      div.main_menu ul.nav-child li a {
+      div.main-menu ul.nav-child li a {
         display: block;
         float: left;
         border-radius: 20px;
@@ -45,7 +45,7 @@ div.main_menu {
         transition: background .5s ease-in-out;
         -moz-transition: background .5s ease-in-out;
         -webkit-transition: background .5s ease-in-out; }
-      div.main_menu ul.nav-child li a:hover {
+      div.main-menu ul.nav-child li a:hover {
         color: #000;
         transition: background .5s ease-in-out;
         -moz-transition: background .5s ease-in-out;

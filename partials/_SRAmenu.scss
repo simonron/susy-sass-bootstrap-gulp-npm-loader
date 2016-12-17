@@ -1,26 +1,67 @@
 #jumbotron,
-#gulp_test,
-#susy_demo,
-#carousel{
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform; 
+#gulp-test,
+#susy-demo,
+#carousel,
+#about,
+#footer {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-property: -webkit-transform;
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
 	background: #fff;
-	border-radius:20px;
-	padding:15px;
+	border-radius: 20px;
+	padding: 15px;
+}
+#mask {
+	background: #000;
+	height: 0vh;
+	position: fixed;
+	top: 0vh;
+	width: 100vw;
+	margin-left: -10px;
+	opacity: 0;
+	z-index: 3;
 }
 
-#mask {
-  background: #000;
-  height: 0vh;
-  position: fixed;
-  top: 0vh;
-  width: 100vw;
-  opacity: 0;
-  z-index: 3; }
+/******** Susy grid layout override ******************************/
+
+.mobile-menu-bar {
+	display: none;
+}
+@include breakpoint($exSmall) {
+	.mobile-menu-bar {
+		display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+}
+@include breakpoint($small) {
+	.mobile-menu-bar {
+		display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+}
+@include breakpoint($small-tab) {
+	.mobile-menu-bar {
+		display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+}
+@include breakpoint($medium) {
+	.mobile-menu-bar {
+		display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+}

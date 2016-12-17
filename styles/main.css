@@ -6667,9 +6667,11 @@ div.featurette {
         margin-top: 25px; } }
 
 #jumbotron,
-#gulp_test,
-#susy_demo,
-#carousel {
+#gulp-test,
+#susy-demo,
+#carousel,
+#about,
+#footer {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -6689,14 +6691,43 @@ div.featurette {
   position: fixed;
   top: 0vh;
   width: 100vw;
+  margin-left: -10px;
   opacity: 0;
   z-index: 3; }
 
-div.main_menu {
+/******** Susy grid layout override ******************************/
+.mobile-menu-bar {
+  display: none; }
+
+@media (min-width: 0) and (max-width: 480px) {
+  .mobile-menu-bar {
+    display: block; }
+
+  .main-menu {
+    display: none; } }
+@media (min-width: 480px) and (max-width: 600px) {
+  .mobile-menu-bar {
+    display: block; }
+
+  .main-menu {
+    display: none; } }
+@media (min-width: 600px) and (max-width: 768px) {
+  .mobile-menu-bar {
+    display: block; }
+
+  .main-menu {
+    display: none; } }
+@media (min-width: 768px) and (max-width: 900px) {
+  .mobile-menu-bar {
+    display: block; }
+
+  .main-menu {
+    display: none; } }
+div.main-menu {
   margin-bottom: -10px;
   font-size: 14px; }
 
-div.main_menu li a {
+div.main-menu li a {
   display: block;
   float: left;
   color: #fff;
@@ -6707,14 +6738,14 @@ div.main_menu li a {
   -webkit-transition: background .5s ease-in-out;
   text-decoration: none; }
 
-div.main_menu li a:hover {
+div.main-menu li a:hover {
   color: #000;
   background: #fff;
   transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
   -webkit-transition: background .5s ease-in-out; }
 
-div.main_menu ul.nav-child {
+div.main-menu ul.nav-child {
   margin: 0 auto;
   text-align: center;
   background: #777;
@@ -6728,12 +6759,12 @@ div.main_menu ul.nav-child {
   left: 10vw;
   border: solid 1px orange; }
 
-div.main_menu ul.nav-child li {
+div.main-menu ul.nav-child li {
   display: inline-block;
   margin: 7px 4px 3px;
   line-height: 1.2em; }
 
-div.main_menu ul.nav-child li a {
+div.main-menu ul.nav-child li a {
   display: block;
   float: left;
   border-radius: 20px;
@@ -6742,7 +6773,7 @@ div.main_menu ul.nav-child li a {
   -moz-transition: background .5s ease-in-out;
   -webkit-transition: background .5s ease-in-out; }
 
-div.main_menu ul.nav-child li a:hover {
+div.main-menu ul.nav-child li a:hover {
   color: #000;
   transition: background .5s ease-in-out;
   -moz-transition: background .5s ease-in-out;
