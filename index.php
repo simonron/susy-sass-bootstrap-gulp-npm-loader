@@ -281,8 +281,8 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 							<li data-target="#myCarousel" data-slide-to="2"></li>
 						</ol>
 						<div class="carousel-inner" role="listbox">
-							<div class="carousel-item active">
-								<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+							<div class="item active">
+								<img class="first-slide" src="images/slides/slide-1" alt="First slide">
 								<div class="container">
 									<div class="carousel-caption text-xs-left">
 										<h1>Example headline.</h1>
@@ -291,8 +291,8 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+							<div class="item">
+								<img class="second-slide" src="images/slides/slide-2" alt="Second slide">
 								<div class="container">
 									<div class="carousel-caption">
 										<h1>Another example headline.</h1>
@@ -301,8 +301,8 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+							<div class="item">
+								<img class="third-slide" src="images/slides/slide-3" alt="Third slide">
 								<div class="container">
 									<div class="carousel-caption text-xs-right">
 										<h1>One more for good measure.</h1>
@@ -424,7 +424,7 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
 			<jdoc:include type="modules" name="livereload" style="none" />
 		</div>
-		</div>
+
 	</body>
 
 	</html>

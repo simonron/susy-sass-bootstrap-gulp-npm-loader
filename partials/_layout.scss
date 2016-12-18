@@ -7,14 +7,24 @@ body {
 	@include breakpoint($small) {
 		background: #ff0;
 	}
-	@include breakpoint($small-tab) {
-		background: #f0f;
-	}
-	@include breakpoint($large) {
+	
+/*	@include breakpoint($smallTab) {
+		background: #0f0;
+	}*/
+	
+		@include breakpoint($medium) {
 		background: #0ff;
 	}
-	@include breakpoint($exLarge) {
+	
+	@include breakpoint($large) {
 		background: #00f;
+	}
+	
+	@include breakpoint($exLarge) {
+		background: #f0f;
+	}
+	@include breakpoint($massive) {
+		background: #fff;
 	}
 }
 section {

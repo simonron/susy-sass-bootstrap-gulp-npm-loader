@@ -6249,24 +6249,44 @@ template {
       width: 1170px; } }
 
 /* +++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++ */
+	/* ++++++++++
+Site specific settings 
++++++++++++++++++++++++++++ */
+	/*#myCarousel{
+	.item img{
+	width:330px;
+		height:330px;
+	}
+}*/
+.main-menu ul {
+  background: #000;
+  border-radius: 10px; }
+
 body {
   background-color: #fbeecb;
-  transition: all 1.5s ease-in-out; }
-  @media (min-width: 0) and (max-width: 480px) {
+  transition: all 1.5s ease-in-out;
+  /*	@include breakpoint($smallTab) {
+  		background: #0f0;
+  	}*/ }
+  @media (min-width: 0) {
     body {
       background: #f00; } }
-  @media (min-width: 480px) and (max-width: 600px) {
+  @media (min-width: 480px) {
     body {
       background: #ff0; } }
-  @media (min-width: 600px) and (max-width: 768px) {
-    body {
-      background: #f0f; } }
-  @media (min-width: 900px) and (max-width: 1100px) {
+  @media (min-width: 768px) {
     body {
       background: #0ff; } }
-  @media (min-width: 1200px) and (max-width: 1400px) {
+  @media (min-width: 900px) and (max-width: 1100px) {
     body {
       background: #00f; } }
+  @media (min-width: 1100px) and (max-width: 1400px) {
+    body {
+      background: #f0f; } }
+  @media (min-width: 1400px) {
+    body {
+      background: #fff; } }
 
 section:after {
   content: " ";
@@ -6294,7 +6314,7 @@ section:after {
 /*
 joomla layout  
 */
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) {
   #sidebar {
     width: 18.36735%;
     float: left;
@@ -6344,7 +6364,7 @@ joomla layout
     margin-right: 0;
     transition: all 1.5s ease-in-out;
     background: #aaa; } }
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1100px) and (max-width: 1400px) {
   #sidebar {
     width: 23.72881%;
     float: left;
@@ -6454,7 +6474,7 @@ END joomla layout
   transition: all 1.5s ease-in-out; }
 
 /*exSmall*/
-@media (min-width: 0) and (max-width: 480px) {
+@media (min-width: 0) {
   .ag,
   .item,
   .item1,
@@ -6469,7 +6489,7 @@ END joomla layout
     padding: 5px 0px;
     transition: all 1.5s ease-in-out; } }
 /*small*/
-@media (min-width: 480px) and (max-width: 600px) {
+@media (min-width: 480px) {
   .item,
   .item1,
   .item2,
@@ -6521,7 +6541,7 @@ END joomla layout
     margin-right: 0;
     transition: all 1.5s ease-in-out; } }
 /*medium*/
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) {
   .ag1 {
     width: 49.15254%;
     float: left;
@@ -6568,7 +6588,7 @@ END joomla layout
   div {
     padding: 5px 0; } }
 /*exLarge*/
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1100px) and (max-width: 1400px) {
   .container {
     width: 90%;
     margin: 0 auto; }
@@ -6606,12 +6626,12 @@ END joomla layout
 .marketing img {
   display: block;
   margin: 0 auto; }
-@media (min-width: 0) and (max-width: 480px) {
+@media (min-width: 0) {
   .marketing div {
     width: 95%;
     max-width: 300px;
     margin: 0 auto; } }
-@media (min-width: 480px) and (max-width: 5000px) {
+@media (min-width: 1400px) {
   .marketing div:first-child {
     width: 28.57143%;
     float: left;
@@ -6648,7 +6668,7 @@ div.featurette {
     margin-left: 0;
     margin-right: 0;
     margin-top: 25px; }
-  @media (min-width: 480px) and (max-width: 5000px) {
+  @media (min-width: 1400px) {
     div.featurette {
       margin-bottom: 10px; }
       div.featurette:after {
@@ -6699,13 +6719,13 @@ div.featurette {
 .mobile-menu-bar {
   display: none; }
 
-@media (min-width: 0) and (max-width: 480px) {
+@media (min-width: 0) {
   .mobile-menu-bar {
     display: block; }
 
   .main-menu {
     display: none; } }
-@media (min-width: 480px) and (max-width: 600px) {
+@media (min-width: 480px) {
   .mobile-menu-bar {
     display: block; }
 
@@ -6717,7 +6737,7 @@ div.featurette {
 
   .main-menu {
     display: none; } }
-@media (min-width: 768px) and (max-width: 900px) {
+@media (min-width: 768px) {
   .mobile-menu-bar {
     display: block; }
 
