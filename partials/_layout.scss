@@ -1,3 +1,19 @@
+$exSmall: 0 480px;
+$small: 480px 600px;
+$medium: 600px 900px;
+$large: 900px 1200px;
+$exLarge: 1200px 5000px;
+@mixin threecols{
+	div:first-child {
+			@include span(1 of 3);
+		}
+		div:nth-child(2) {
+			@include span(1 of 3);
+		}
+		div:last-child {
+			@include span(1 of 3 last);
+		}
+}
 body {
 	background-color: #fbeecb;
 	transition: all 1.5s ease-in-out;
@@ -289,24 +305,30 @@ END joomla layout
 		margin: 0 auto;
 	}
 	div {
-		@include breakpoint($exSmall) {
+		@include breakpoint($medium) {
 			width: 95%;
 			max-width: 300px;
 			margin: 0 auto;
 		}
 	}
-	@include breakpoint($massive) {
-		div:first-child {
-			@include span(1 of 3);
-		}
-		div:nth-child(2) {
-			@include span(1 of 3);
-		}
-		div:last-child {
-			@include span(1 of 3 last);
-		}
+	
+	@include breakpoint($medium){
+		@include threecols();
 	}
+@include breakpoint($large){
+		@include threecols();
+	}
+@include breakpoint($exLarge){
+		@include threecols();
+	}
+@include breakpoint($massive){
+		@include threecols();
+	}
+	
 }
+	
+	
+
 div.featurette {
 	margin-bottom: 10px;
 	@include clearfix;
