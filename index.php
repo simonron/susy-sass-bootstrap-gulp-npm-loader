@@ -211,7 +211,7 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 				</div>
 			</section>
 
-			<footer class="text-muted">
+			<footer id="footer" class="text-muted">
 				<div class="container">
 					<p class="float-xs-right">
 						<a href="#">Back to top</a>
@@ -227,7 +227,7 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 				<input type="text" class="btn btn-default float_left" value="frog">
 				<input type="text" class="btn btn-warning float_center" value="frog">
 				<input type="text" class="btn btn-danger float_right" value="frog">
-				<section id="gulp_test">
+				<section id="gulp-test">
 					<h1 id="title">Simon started with gulp... </h1> Gulp is a command line task runner utilizing Node.js platform. It runs custom defined repetitious tasks and manages process automation. The goal of this tutorial is to introduce main concepts of Gulp and see it in action. We will make this run a bit faster
 
 					<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque modi dolorem, dolore est dolores nesciunt quae natus ducimus laboriosam nisi aut iure, fuga corporis voluptate architecto ut hic blanditiis placeat.</h2>
@@ -240,8 +240,9 @@ if (file_exists($userCss) && filesize($userCss) > 0)
 				</section>
 			</div>
 
-							<jdoc:include type="modules" name="susy_demo" style="xhtml" />
-
+						<section id="susy-demo">
+							<jdoc:include type="modules"  name="susy_demo" style="xhtml" />
+</section>
 			
 			<div class="container">
 				<div class="item1 "> item1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sequi cumque dignissimos maiores possimus neque perferendis tempore, a facilis id cum magni excepturi illo debitis nihil libero soluta non quasi.</div>
